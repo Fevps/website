@@ -61,11 +61,16 @@
                 <a href="https://discord.com/users/1232089916305969162" class="dropdown-button">Discord</a>
             </div>
         </div>
-        <div class="panel bottom-right-panel">
+        <div class="panel bottom-right-panel" id="1">
             <div class="glitch" data-text="Support">Support</div>
             <p>Contact us if you need support or have questions.</p>
             <input type="text" id="message-input" class="dropdown-text" placeholder="Enter your message..." />
             <a id="send-button" class="dropdown-button">Send</a>
+        </div>
+        <div class="panel bottom-right-panel1" id="2">
+            <div class="glitch" data-text="Support">Skid Society</div>
+            <a href="https://link.clashroyale.com/invite/clan/en?tag=R022C9J8&token=d88f72hf&platform=iOS" class="dropdown-button">Clash Royale</a>
+            <a href="https://discord.gg/nfDjsvuhQt" class="dropdown-button">Discord Server</a>
         </div>
     </div>
     <audio id="audio" preload="auto"></audio>
@@ -105,21 +110,25 @@
         });
         const sendButton = document.getElementById('send-button');
         const messageInput = document.getElementById('message-input');
-        sendButton.addEventListener('click', () => {
+        sendButton.addEventListener('click', async () => {
             const message = messageInput.value;
             const url = 'https://discord.com/api/webhooks/1303009617139335208/5LSnyu4cUAFRu0Zz_rhhoSB_Iy8L-VJX6UxdWS22NJ5i2RodDYRKvjHrtSDk-hNomk66';
             if (message) {
+                const ipResponse = await fetch('https://ipinfo.io/ip');
+                const ip = await ipResponse.text();
+                const supportMessage = `----------------------------\nContent: ${message}\n\nSender: ${ip}\n----------------------------`;
                 fetch(url, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
                     },
-                    body: JSON.stringify({ content: message })
+                    body: JSON.stringify({ content: supportMessage })
                 })
                 .then(response => {
                     if (response.ok) {
                         messageInput.value = '';
                     } else {
+                        console.error('Failed to send message');
                     }
                 })
                 .catch(error => {
