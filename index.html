@@ -67,8 +67,7 @@
             <input type="text" id="message-input" class="dropdown-text" placeholder="Enter your message..." />
             <a id="send-button" class="dropdown-button">Send</a>
         </div>
-        <div class="panel bottom-right-panel1" id="2">
-            <div class="glitch" data-text="Support">Skid Society</div>
+        <div class="bottom-right-panel1" id="2">
             <a href="https://link.clashroyale.com/invite/clan/en?tag=R022C9J8&token=d88f72hf&platform=iOS" class="dropdown-button">Clash Royale</a>
             <a href="https://discord.gg/nfDjsvuhQt" class="dropdown-button">Discord Server</a>
         </div>
@@ -135,6 +134,22 @@
                     console.error('Error:', error);
                 });
             }
+        });
+    </script>
+    <script>
+        const cursor = document.createElement('div');
+        cursor.classList.add('glitter-cursor');
+        document.body.appendChild(cursor);
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = `${e.pageX}px`;
+            cursor.style.top = `${e.pageY}px`;
+        });
+        document.addEventListener('mousemove', (e) => {
+            const mouseX = e.pageX;
+            const mouseY = e.pageY;
+            const offsetX = (Math.random() - 0.5) * 20;
+            const offsetY = (Math.random() - 0.5) * 20;
+            cursor.style.transform = `translate(${offsetX}px, ${offsetY}px)`;
         });
     </script>
 </body>
