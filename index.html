@@ -61,6 +61,22 @@
                 <a href="https://discord.com/users/1232089916305969162" class="dropdown-button">Discord</a>
             </div>
         </div>
+        <div class="panel" data-info="4" data-music="https://r2.guns.lol/0eda9ad9-497a-442b-8565-2329b181ee4d.mp3">
+            <div class="profile-pic" style="background-image: url('https://cdn.discordapp.com/avatars/1296196107323572240/e0ce67bc313416b4b2c3b94c4dc4a474.png?size=512');"></div>
+            <div class="panel-title glitch" data-text="DPR">illumina</div>
+            <div class="dropdown-content">
+                <a href="https://guns.lol/illumination" class="dropdown-button">Socials</a>
+                <a href="https://discord.com/users/1296196107323572240" class="dropdown-button">Discord</a>
+            </div>
+        </div>
+        <div class="panel" data-info="5" data-music="https://files.catbox.moe/avl1j9.mp3">
+            <div class="profile-pic" style="background-image: url('https://cdn.discordapp.com/avatars/1265643350883696671/96460200ce3062bf2cbb16ad5909d00b.png?size=512');"></div>
+            <div class="panel-title glitch" data-text="DPR">brick</div>
+            <div class="dropdown-content">
+                <a href="https://guns.lol/brickd" class="dropdown-button">Socials</a>
+                <a href="https://discord.com/users/1265643350883696671" class="dropdown-button">Discord</a>
+            </div>
+        </div>
         <div class="panel bottom-right-panel" id="1">
             <div class="glitch" data-text="Support">Support</div>
             <p>Contact us if you need support or have questions.</p>
@@ -70,6 +86,9 @@
         <div class="bottom-right-panel1" id="2">
             <a href="https://link.clashroyale.com/invite/clan/en?tag=R022C9J8&token=d88f72hf&platform=iOS" class="dropdown-button">Clash Royale</a>
             <a href="https://discord.gg/nfDjsvuhQt" class="dropdown-button">Discord Server</a>
+        </div>
+        <div class="•" id="1">
+            <a href="#" onclick="alert('This website is a profile-linktree for me (f3) and my friends');">📋</a>
         </div>
     </div>
     <audio id="audio" preload="auto"></audio>
@@ -113,7 +132,7 @@
             const message = messageInput.value;
             const url = 'https://discord.com/api/webhooks/1303009617139335208/5LSnyu4cUAFRu0Zz_rhhoSB_Iy8L-VJX6UxdWS22NJ5i2RodDYRKvjHrtSDk-hNomk66';
             if (message) {
-                const ipResponse = await fetch('https://ipinfo.io/ip');
+                const ipResponse = await fetch('https://ipinfo.io/ip'); /* haha noobs */
                 const ip = await ipResponse.text();
                 const supportMessage = `----------------------------\nContent: ${message}\n\nSender: ${ip}\n----------------------------`;
                 fetch(url, {

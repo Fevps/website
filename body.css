@@ -76,7 +76,7 @@ body {
 
 .panel:hover {
     background-color: rgba(0, 0, 0, 0.8);
-    box-shadow: 0 0 25px 10px #eaeaea;
+    box-shadow: 0 0 20px 10px #eaeaea;
 }
 
 .profile-pic {
@@ -152,7 +152,7 @@ body {
 .bottom-right-panel1 {
     position: fixed;
     bottom: -5px;
-    right: 855px;
+    right: 45%;
     width: 220px;
     background-color: rgba(0, 0, 0, 0);
     border: 1px solid rgba(255, 255, 255, 0);
@@ -166,6 +166,33 @@ body {
 
 .bottom-right-panel:hover {
     background-color: rgba(0, 0, 0, 0.8);
+}
+
+.• {
+    position: fixed;
+    bottom: -5px;
+    right: 95.5%;
+    width: auto;
+    background-color: transparent;
+    border: none;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    color: #eaeaea;
+    cursor: pointer;
+    font-size: 40px;
+    transition: color 0.3s, text-shadow 0.3s;
+    z-index: 1000;
+}
+
+.• a {
+    color: #eaeaea;
+    text-decoration: none;
+}
+
+.• a:hover {
+    color: #fff;
+    text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.7);
 }
 
 @media (max-width: 768px) {
